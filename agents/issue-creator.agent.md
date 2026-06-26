@@ -25,8 +25,9 @@ Methodology:
 5. Format the draft clearly showing how it maps to the template sections
 6. Present the complete draft to user for review and approval
 7. Wait for explicit approval (yes/no) before proceeding
-8. Upon approval, create the issue using the GitHub API or CLI
-9. Provide confirmation with the issue URL
+8. Strip the YAML front matter (`---` block with `name`, `about`, `title`, `labels`, `assignees`) from the template — it is metadata for GitHub's template picker, not issue body content. Use those fields to populate the corresponding `gh issue create` flags (`--title`, `--label`, `--assignee`).
+9. Create the issue using the GitHub API or CLI
+10. Provide confirmation with the issue URL
 
 Template matching:
 - Analyze template names and content to understand their purpose
