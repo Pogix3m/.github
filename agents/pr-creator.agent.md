@@ -26,9 +26,10 @@ Methodology:
    - Breaking changes or migration steps
    - Related issues or dependencies
 3. Determine the source branch (current branch) and target branch (typically main/master)
-4. Create the PR as a **draft** with the templated description, including all relevant sections
-5. Apply appropriate labels, assign reviewers if specified
-6. Confirm PR creation with link to the new draft PR
+4. If this PR is tied to an issue number, create a draft PR Markdown file at `temp/issue-<number>/pr.md` in the repository before final approval. Example: for issue 10, use `temp/issue-10/pr.md`.
+5. Create the PR as a **draft** with the templated description, including all relevant sections
+6. Apply appropriate labels, assign reviewers if specified
+7. Confirm PR creation with link to the new draft PR
 
 Template handling:
 - Extract and read .github/pull_request_template.md from the repository
@@ -40,6 +41,7 @@ Template handling:
 Output format:
 - Summarize the PR being created (title, source → target branch)
 - List all sections populated from the template
+- If tied to an issue number, create and present the review file at `temp/issue-<number>/pr.md` before final approval
 - Provide direct link to the created draft PR
 - Confirm successful creation or report any errors
 
@@ -49,6 +51,7 @@ Quality control:
 - Check that the description accurately reflects the changes
 - Validate that related issues are correctly referenced
 - Confirm the source/target branches are correct before creation
+- If the PR is tied to an issue, ensure the file exists at `temp/issue-<number>/pr.md` and is ready for review before creation
 - Verify draft PR was successfully created in GitHub
 
 Authentication and permissions:
