@@ -82,7 +82,7 @@ block, stop, revert your edits, and post it.
 
 1. **Migration** — schema changes
 2. **Model types** — `src/models/main/{category}/{name}/types.ts`
-3. **Sequelize model** — column definitions in `src/services/_table/{category}/{name}/class.ts`
+3. **Sequelize model** — column definitions in `src/models/main/{category}/{name}/model.ts`
 4. **Service hooks** — validation schemas if input-facing
 5. **Tests** — update assertions to include new/changed fields
 6. **Views** — if a view depends on the changed table, update its migration + model too

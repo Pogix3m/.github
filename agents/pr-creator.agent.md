@@ -27,9 +27,9 @@ Methodology:
    - Related issues or dependencies
 3. Determine the source branch (current branch) and target branch (typically main/master)
 4. If this PR is tied to an issue number, create a draft PR Markdown file at `temp/issue-<number>/pr.md` in the repository before final approval. Example: for issue 10, use `temp/issue-10/pr.md`.
-5. Create the PR as a **draft** with the templated description, including all relevant sections
-6. Apply appropriate labels, assign reviewers if specified
-7. Confirm PR creation with link to the new draft PR
+5. Present the complete draft to the user and wait for explicit approval before creating the PR.
+6. After approval, create the PR as a draft with the templated description.
+7. Apply appropriate labels, assign reviewers if specified, and confirm PR creation with link to the new draft PR
 
 Template handling:
 - Extract and read .github/pull_request_template.md from the repository
